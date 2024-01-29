@@ -9,7 +9,7 @@ Univariate_4_charts structure:
   4. the general vegalite structure + jupyter is :
       spec = { [VEGALITE SPEC. (example:https://vega.github.io/vega-lite/examples/bar.html) }
       display(alt.display.html_renderer(spec), raw=True)
- 6. the processed geodataframes needs to be converted to be compatible with Vegalite spec in the follwoing format :
+ 6. the processed geodataframes needs to be converted to be compatible with Vegalite spec in the following format :
     income_pop_json = income_pop_gdf.to_json() //convert the geodataframe into JSON string
     income_pop_geojson = json.loads(income_pop_json)      //convert the JSON string into python object to be used in vegalite spec
   7. Bivariate Charts are generated using choropleth charts in vegalite asa workaround. We assign colours based on the ranges which falls in a 3x3 grid.
